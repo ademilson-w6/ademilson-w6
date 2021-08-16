@@ -3,7 +3,6 @@ Mentira, me chamo Ademilson, e estou tentando sempre evoluir profissionalmente n
  <div>
   <a href="https://github.com/ademilson-w6">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=ademilson-w6&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ademilson-w6&layout=compact&langs_count=7/>
 </div>
   
   ##
