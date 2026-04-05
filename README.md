@@ -1,10 +1,6 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Ademilson%20Silva&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=36&desc=Java%20Software%20Developer&descAlignY=56&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=130&section=header&text=Ademilson%20Silva&fontSize=32&fontColor=fff&animation=twinkling&fontAlignY=40&desc=Java%20Software%20Developer&descAlignY=62&descSize=15" width="100%"/>
 
 <div align="center">
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&width=620&lines=APIs+que+escalam+%F0%9F%9A%80;Microservices+%7C+Cloud+%7C+DevOps;Clean+Architecture+%7C+SOLID;Caf%C3%A9+%E2%98%95+%2B+C%C3%B3digo+%3D+Produ%C3%A7%C3%A3o+%E2%9C%85)](https://git.io/typing-svg)
-
-<br/>
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
@@ -23,8 +19,6 @@
 
 <br/>
 
-<br/>
-
 <a href="https://www.linkedin.com/in/ademilson-silva" target="_blank">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
@@ -37,4 +31,4 @@
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
