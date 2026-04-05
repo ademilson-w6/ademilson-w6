@@ -9,6 +9,7 @@
       .blue  { fill: #58a6ff; }
       .green { fill: #3fb950; }
       .cyan  { fill: #39d353; }
+      .orange { fill: #e3b341; }
 
       @keyframes l1cmd  { 0%,7%  {opacity:0} 8%,87%  {opacity:1} 88%,100% {opacity:0} }
       @keyframes l1out  { 0%,22% {opacity:0} 23%,87% {opacity:1} 88%,100% {opacity:0} }
@@ -40,52 +41,47 @@
   <circle cx="66" cy="16" r="6" fill="#28c840"/>
 
   <!-- Window title -->
-  <text x="380" y="21" text-anchor="middle" class="txt dim">zsh  —  ~/backend</text>
+  <text x="380" y="21" text-anchor="middle" class="txt dim">zsh  —  ~/api-service</text>
 
-  <!-- Line 1: command -->
+  <!-- Line 1: mvn build -->
   <text class="txt l1cmd" y="56">
     <tspan x="18" class="blue">➜</tspan>
-    <tspan class="green">  ~/backend  </tspan>
-    <tspan class="white">git push origin main --follow-tags</tspan>
+    <tspan class="green">  ~/api-service  </tspan>
+    <tspan class="white">mvn clean package -DskipTests</tspan>
   </text>
 
   <!-- Line 1: output -->
   <text class="txt l1out" y="74">
     <tspan x="18" class="green">✓</tspan>
-    <tspan class="dim">  Build passed · Deploy triggered · </tspan>
-    <tspan class="cyan">v2.4.1 → production</tspan>
+    <tspan class="dim">  BUILD SUCCESS · </tspan>
+    <tspan class="cyan">api-service-2.4.1.jar</tspan>
+    <tspan class="dim"> · 4.3s</tspan>
   </text>
 
-  <!-- Line 2: command -->
+  <!-- Line 2: actuator health check -->
   <text class="txt l2cmd" y="100">
     <tspan x="18" class="blue">➜</tspan>
-    <tspan class="green">  ~/backend  </tspan>
-    <tspan class="white">curl -s :3000/metrics | jq '.latency'</tspan>
+    <tspan class="green">  ~/api-service  </tspan>
+    <tspan class="white">curl -s :8080/actuator/health | jq</tspan>
   </text>
 
-  <!-- Line 2: output -->
+  <!-- Line 2: output JSON -->
   <text class="txt l2out" y="118">
     <tspan x="18" class="dim">{  </tspan>
-    <tspan class="cyan">"p50"</tspan>
-    <tspan class="dim">: </tspan>
-    <tspan class="green">"3ms"</tspan>
+    <tspan class="cyan">"status"</tspan><tspan class="dim">: </tspan><tspan class="green">"UP"</tspan>
     <tspan class="dim">,  </tspan>
-    <tspan class="cyan">"p95"</tspan>
-    <tspan class="dim">: </tspan>
-    <tspan class="green">"11ms"</tspan>
+    <tspan class="cyan">"rabbitmq"</tspan><tspan class="dim">: </tspan><tspan class="green">"UP"</tspan>
     <tspan class="dim">,  </tspan>
-    <tspan class="cyan">"p99"</tspan>
-    <tspan class="dim">: </tspan>
-    <tspan class="green">"27ms"</tspan>
+    <tspan class="cyan">"postgres"</tspan><tspan class="dim">: </tspan><tspan class="green">"UP"</tspan>
     <tspan class="dim">  }</tspan>
   </text>
 
   <!-- Line 3: next prompt -->
   <text class="txt l3cmd" y="144">
     <tspan x="18" class="blue">➜</tspan>
-    <tspan class="green">  ~/backend  </tspan>
+    <tspan class="green">  ~/api-service  </tspan>
   </text>
 
   <!-- Blinking cursor -->
-  <rect class="cursor" x="176" y="131" width="9" height="15" fill="#e6edf3"/>
+  <rect class="cursor" x="188" y="131" width="9" height="15" fill="#e6edf3"/>
 </svg>
