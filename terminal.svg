@@ -1,0 +1,91 @@
+<svg viewBox="0 0 760 168" width="760" height="168" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg    { fill: #0d1117; }
+      .bar   { fill: #161b22; }
+      .txt   { font-family: 'Courier New', Courier, monospace; font-size: 13px; }
+      .dim   { fill: #6e7681; }
+      .white { fill: #e6edf3; }
+      .blue  { fill: #58a6ff; }
+      .green { fill: #3fb950; }
+      .cyan  { fill: #39d353; }
+
+      @keyframes l1cmd  { 0%,7%  {opacity:0} 8%,87%  {opacity:1} 88%,100% {opacity:0} }
+      @keyframes l1out  { 0%,22% {opacity:0} 23%,87% {opacity:1} 88%,100% {opacity:0} }
+      @keyframes l2cmd  { 0%,37% {opacity:0} 38%,87% {opacity:1} 88%,100% {opacity:0} }
+      @keyframes l2out  { 0%,52% {opacity:0} 53%,87% {opacity:1} 88%,100% {opacity:0} }
+      @keyframes l3cmd  { 0%,67% {opacity:0} 68%,87% {opacity:1} 88%,100% {opacity:0} }
+      @keyframes blink  { 0%,49% {opacity:1} 50%,100% {opacity:0} }
+      @keyframes cursor { 0%,67% {opacity:0} 68%,87%  {opacity:1} 88%,100% {opacity:0} }
+
+      .l1cmd  { opacity:0; animation: l1cmd  12s ease infinite; }
+      .l1out  { opacity:0; animation: l1out  12s ease infinite; }
+      .l2cmd  { opacity:0; animation: l2cmd  12s ease infinite; }
+      .l2out  { opacity:0; animation: l2out  12s ease infinite; }
+      .l3cmd  { opacity:0; animation: l3cmd  12s ease infinite; }
+      .cursor { opacity:0; animation: cursor 12s ease infinite, blink 0.9s step-end infinite; }
+    </style>
+  </defs>
+
+  <!-- Window background -->
+  <rect width="760" height="168" rx="10" class="bg"/>
+
+  <!-- Title bar -->
+  <rect width="760" height="32" rx="10" class="bar"/>
+  <rect y="22" width="760" height="10" class="bar"/>
+
+  <!-- Traffic lights -->
+  <circle cx="22" cy="16" r="6" fill="#ff5f57"/>
+  <circle cx="44" cy="16" r="6" fill="#febc2e"/>
+  <circle cx="66" cy="16" r="6" fill="#28c840"/>
+
+  <!-- Window title -->
+  <text x="380" y="21" text-anchor="middle" class="txt dim">zsh  —  ~/backend</text>
+
+  <!-- Line 1: command -->
+  <text class="txt l1cmd" y="56">
+    <tspan x="18" class="blue">➜</tspan>
+    <tspan class="green">  ~/backend  </tspan>
+    <tspan class="white">git push origin main --follow-tags</tspan>
+  </text>
+
+  <!-- Line 1: output -->
+  <text class="txt l1out" y="74">
+    <tspan x="18" class="green">✓</tspan>
+    <tspan class="dim">  Build passed · Deploy triggered · </tspan>
+    <tspan class="cyan">v2.4.1 → production</tspan>
+  </text>
+
+  <!-- Line 2: command -->
+  <text class="txt l2cmd" y="100">
+    <tspan x="18" class="blue">➜</tspan>
+    <tspan class="green">  ~/backend  </tspan>
+    <tspan class="white">curl -s :3000/metrics | jq '.latency'</tspan>
+  </text>
+
+  <!-- Line 2: output -->
+  <text class="txt l2out" y="118">
+    <tspan x="18" class="dim">{  </tspan>
+    <tspan class="cyan">"p50"</tspan>
+    <tspan class="dim">: </tspan>
+    <tspan class="green">"3ms"</tspan>
+    <tspan class="dim">,  </tspan>
+    <tspan class="cyan">"p95"</tspan>
+    <tspan class="dim">: </tspan>
+    <tspan class="green">"11ms"</tspan>
+    <tspan class="dim">,  </tspan>
+    <tspan class="cyan">"p99"</tspan>
+    <tspan class="dim">: </tspan>
+    <tspan class="green">"27ms"</tspan>
+    <tspan class="dim">  }</tspan>
+  </text>
+
+  <!-- Line 3: next prompt -->
+  <text class="txt l3cmd" y="144">
+    <tspan x="18" class="blue">➜</tspan>
+    <tspan class="green">  ~/backend  </tspan>
+  </text>
+
+  <!-- Blinking cursor -->
+  <rect class="cursor" x="176" y="131" width="9" height="15" fill="#e6edf3"/>
+</svg>
