@@ -18,6 +18,7 @@ jobs:
           github_user_name: ademilson-w6
           outputs: |
             dist/github-contribution-grid-snake.svg?palette=github-dark
+            dist/github-contribution-grid-snake.gif?palette=github-dark
 
       - uses: crazy-max/ghaction-github-pages@v4
         with:
